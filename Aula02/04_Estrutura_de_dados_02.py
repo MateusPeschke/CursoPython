@@ -22,10 +22,16 @@ print(lista_aluno)
 
 
 # Dicionario
-dict_alunos = {'nome':'Maycon','sobrenome':'Granemann','idade':18}
-dict_alunos = {'nome':'Mateus','sobrenome':'Peschke','idade':18}
-print(dict_alunos)
-print(dict_alunos['nome'])
+aluno1 = {'nome':'Maycon','sobrenome':'Granemann','idade':18,'lista_notas':[10,8,9,7]}
+aluno2 = {'nome':'Mateus','sobrenome':'Peschke','idade':22,'lista_notas':[7,6,8,9]}
+lista = [aluno1,aluno2]
+print(aluno1)
+print(aluno1['nome'])
+for a in lista:
+    print(a['nome'])
+    print(a['sobrenome'])
+    print(a['idade'])
+    print(a['lista_notas'])
 
 # dict_numero={'n1':10,2:3,3:5}
 # print(dict_numero)
