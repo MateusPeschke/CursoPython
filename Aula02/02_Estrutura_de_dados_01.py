@@ -68,3 +68,9 @@ print(lista_idades)
 index = lista_idades.index(152)
 lista_idades.insert(index+1,153)
 print(lista_idades)
+
+# Alterar dado em uma posição específica
+lista_idades[0] = 150
+lista_idades[1] = 151
+lista_idades[4] = 154
+print(lista_idades)
