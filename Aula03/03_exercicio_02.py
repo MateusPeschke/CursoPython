@@ -9,7 +9,14 @@
 #         print(cont)
 
 
-menu = input('''
+
+def teclado():
+    num1_fun = int(input('Digite o numero: '))
+    num2_fun = int(input('Digite o numero: '))
+    return num1_fun,num2_fun
+
+def menu_fun():
+    menu = '''
 Menu:
 
 1 - Soma
@@ -19,21 +26,42 @@ Menu:
 S - Sair
 
 Digite a opção desejada: 
-''')
-num1 = int(input('Digite o numero: '))
-num2 = int(input('Digite o numero: '))
+'''
+    print(menu)
 
-while menu != 'S':
-    if menu == '1':
-        soma = num1 + num2
-        print(soma)
-    elif menu == '2':
-        sub = num1 - num2
-        print(sub)
-    elif menu == '3':
-        mult = num1 * num2
-        print(mult)
-    else:
-        div = num1 / num2
-        print(div)
-    continue
+def soma (num1_fun,num2_fun):
+    soma = num1_fun + num2_fun
+    return soma
+def sub (num1_fun,num2_fun):
+    sub = num1_fun - num2_fun
+    return sub
+def mult (num1_fun,num2_fun):
+    mult = num1_fun * num2_fun
+    return mult
+def div (num1_fun,num2_fun):
+    div = num1_fun / num2_fun
+    return div
+while True:
+    menu_fun()
+    opcao = input()
+    if opcao == '1':
+        num1,num2 = teclado()
+        soma_res = soma(num1,num2)
+        print(f'O resultado é : {soma_res}')
+    if opcao == '2':
+        num1,num2 = teclado()
+        sub_res = sub (num1,num2)
+        print(f'O resultado é : {sub_res}')
+    if opcao == '3':
+        num1,num2 = teclado()
+        mult_res = mult(num1,num2)
+        print(f'O resultado é : {mult_res}')
+    if opcao == '4':
+        num1,num2 = teclado()
+        div_res = div(num1,num2)
+        print(f'O resultado é : {div_res}')
+    if opcao.upper() == 'S':
+        print("Saindo...")
+        break
+    
+
