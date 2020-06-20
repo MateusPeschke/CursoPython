@@ -32,34 +32,45 @@ Digite a opção desejada:
 def soma (num1_fun,num2_fun):
     soma = num1_fun + num2_fun
     return soma
+
 def sub (num1_fun,num2_fun):
     sub = num1_fun - num2_fun
     return sub
+
 def mult (num1_fun,num2_fun):
     mult = num1_fun * num2_fun
     return mult
+
 def div (num1_fun,num2_fun):
     div = num1_fun / num2_fun
     return div
+
 while True:
+
     menu_fun()
+
     opcao = input()
+    
     if opcao == '1':
         num1,num2 = teclado()
         soma_res = soma(num1,num2)
         print(f'O resultado é : {soma_res}')
+
     if opcao == '2':
         num1,num2 = teclado()
         sub_res = sub (num1,num2)
         print(f'O resultado é : {sub_res}')
+
     if opcao == '3':
         num1,num2 = teclado()
         mult_res = mult(num1,num2)
         print(f'O resultado é : {mult_res}')
+
     if opcao == '4':
         num1,num2 = teclado()
         div_res = div(num1,num2)
         print(f'O resultado é : {div_res}')
+
     if opcao.upper() == 'S':
         print("Saindo...")
         break
